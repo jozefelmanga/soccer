@@ -1,0 +1,5 @@
+<app-banner [title]="'Matches'" ></app-banner>
+
+<div class="site-section" *ngFor="let m of matches">
+    <app-match [match]="m" (passId)="parentdeleteMatch($event)"></app-match>
+</div>

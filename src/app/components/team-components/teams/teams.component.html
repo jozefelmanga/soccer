@@ -1,0 +1,9 @@
+<app-banner [title]="'teams'"></app-banner>
+
+<div class="site-section container">
+  <div class="row justify-content-center">
+    <ng-container *ngFor="let t of teams">
+      <app-team [team]="t"></app-team>
+    </ng-container>
+  </div>
+</div>

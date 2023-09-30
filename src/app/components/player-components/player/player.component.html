@@ -1,0 +1,61 @@
+<div class="fut-player-card m-3">
+    <!-- Player Card Top-->
+    <div class="player-card-top">
+      <div class="player-master-info">
+        <div class="player-rating"><span>{{playerPower}}</span></div>
+        <div class="player-position"><span>{{player.position}}</span></div>
+        <div class="player-age"><span>{{player.age}}</span></div>
+        <div class="player-age-number"><span>{{player.number}}</span></div>
+      </div>
+      <div class="player-picture">
+        <img [src]="player.playerImg" alt="player" draggable="false"/>
+      </div>
+    </div>
+    <!-- Player Card Bottom-->
+    <div class="player-card-bottom">
+      <div class="player-info">
+        <!-- Player Name-->
+        <div class="player-name"><span>{{player.name}}</span></div>
+        <!-- Player Features-->
+        <div class="player-features">
+          <div class="player-features-col"><span>
+              <div class="player-feature-value">{{playerFeatures['PAC']}}</div>
+              <div class="player-feature-title">PAC</div></span><span>
+              <div class="player-feature-value">{{playerFeatures['SHO']}}</div>
+              <div class="player-feature-title">SHO</div></span><span>
+              <div class="player-feature-value">{{playerFeatures['PAS']}}</div>
+              <div class="player-feature-title">PAS</div></span></div>
+          <div class="player-features-col"><span>
+              <div class="player-feature-value">{{playerFeatures['DRI']}}</div>
+              <div class="player-feature-title">DRI</div></span><span>
+              <div class="player-feature-value">{{playerFeatures['DEF']}}</div>
+              <div class="player-feature-title">DEF</div></span><span>
+              <div class="player-feature-value">{{playerFeatures['PHY']}}</div>
+              <div class="player-feature-title">PHY</div></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="player-info">
+
+    <div class="player-name"><span>RONALDO</span></div>
+    
+    <div class="player-features">
+      <div class="player-features-col"><span>
+          <div class="player-feature-value">{{playerFeatures['PAC']}}</div>
+          <div class="player-feature-title">PAC</div></span><span>
+          <div class="player-feature-value">{{playerFeatures['SHO']}}</div>
+          <div class="player-feature-title">SHO</div></span><span>
+          <div class="player-feature-value">{{playerFeatures['PAS']}}</div>
+          <div class="player-feature-title">PAS</div></span></div>
+      <div class="player-features-col"><span>
+          <div class="player-feature-value">{{playerFeatures['DRI']}}</div>
+          <div class="player-feature-title">DRI</div></span><span>
+          <div class="player-feature-value">{{playerFeatures['DEF']}}</div>
+          <div class="player-feature-title">DEF</div></span><span>
+          <div class="player-feature-value">{{playerFeatures['PHY']}}</div>
+          <div class="player-feature-title">PHY</div></span></div>
+    </div>
+  </div> -->

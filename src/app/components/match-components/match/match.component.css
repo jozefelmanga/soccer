@@ -1,0 +1,20 @@
+.win {
+    font-size: 40px;
+    color: green;
+  } 
+.loss {
+    font-size: 20px;
+    color: blue;
+}
+
+.draw {
+    font-size: 30px;
+    color: yellow;
+}
+img {
+    width: auto; /* Set a fixed width for all logos */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    
+  }
+  
+  

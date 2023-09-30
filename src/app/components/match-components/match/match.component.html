@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="col-lg-12">
+    <div class="d-flex team-vs">
+      <button class="btn-danger" (click)="deleteMatch()">X</button>
+      <span class="score"> <span [ngClass]="{
+        win: compare(match.scoreOne, match.scoreTwo)[0]=='win',
+        loss : compare(match.scoreOne, match.scoreTwo)[0] == 'loss' ,
+        draw  : compare(match.scoreOne, match.scoreTwo)[0] =='draw'
+      }">{{ match.scoreOne }}</span>-<span [ngClass]="{
+        win: compare(match.scoreTwo, match.scoreOne)[0]=='win',
+        loss : compare(match.scoreTwo, match.scoreOne)[0] == 'loss' ,
+        draw  : compare(match.scoreTwo, match.scoreOne)[0] =='draw'
+      }">{{ match.scoreTwo }}</span></span>
+      <div class="team-1 w-50">
+        <div class="team-details w-100 text-center">
+          <img [src]="match.urlOne" alt="Image" class="img-fluid" />
+          <h3 >
+            <!-- https://th.bing.com/th/id/R.c741810f9c33cf1dcc57c99d72e0a88f?rik=cpqlbe4biPOuAA&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2018%2f03%2freal_madrid_cub_de_futbol-logo.png&ehk=0leBxEk7hblAGXb64NVnUz83tfO1n%2bVtT9C3rBadqUM%3d&risl=&pid=ImgRaw&r=0 -->
+            <!-- <span [ngClass]="compare(match.scoreOne, match.scoreTwo)[1]"> {{ match.teamOne }}</span> -->
+            <span [ngStyle]="{'color' :compare(match.scoreOne, match.scoreTwo)[1]}"> {{ match.teamOne }}</span>
+            
+            <span>({{ compare(match.scoreOne, match.scoreTwo)[0] }})</span>
+          </h3>
+        </div>
+      </div>
+      <div class="team-2 w-50">
+        <div class="team-details w-100 text-center">
+          <img [src]="match.urlTwo" alt="Image" class="img-fluid" />
+          <h3>
+            <!-- https://th.bing.com/th/id/R.257920aa82829d1cd83b1c327d9d9f0c?rik=nla%2bsZWv0D3kxQ&riu=http%3a%2f%2flogonoid.com%2fimages%2fchelsea-logo.png&ehk=zGC55L6pp2iUrPaKPpZ0sGA%2fnH6Shhi1e2e3o%2bwVobE%3d&risl=&pid=ImgRaw&r=0 -->
+            <!-- <span [ngClass]="compare(match.scoreTwo, match.scoreOne)[1]"> {{ match.teamTwo }}</span> -->
+            <span [ngStyle]="{'color' :compare(match.scoreTwo, match.scoreOne)[1]}"> {{ match.teamTwo }}</span>
+            <span>({{ compare(match.scoreTwo, match.scoreOne)[1] }})</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <span *ngIf="match.scoreOne > match.scoreTwo">(win)</span
+              ><span *ngIf="match.scoreOne < match.scoreTwo">
+                  (loss)</span>
+                  <span *ngIf="match.scoreTwo == match.scoreOne">
+                    (draw)
+                </span> -->

@@ -1,0 +1,18 @@
+/* Style the select element */
+select.form-control {
+    width: 100%; /* Set the width to 100% to fill the container */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Adjust the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add rounded corners */
+    background-color: #1a1e25; /* Set background color */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  /* Style the select element when it's focused */
+  select.form-control:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #007bff; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a box shadow when focused */
+  }
+  

@@ -1,0 +1,9 @@
+<app-banner [title]="'Players'"></app-banner>
+
+<div class="site-section">
+  <div class="row justify-content-center">
+    <ng-container *ngFor="let p of players">
+      <app-player [player]="p"></app-player>
+    </ng-container>
+  </div>
+</div>

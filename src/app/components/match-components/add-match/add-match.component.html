@@ -1,0 +1,33 @@
+<app-banner [title]="title"></app-banner>
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form #addMatchForm="ngForm" (ngSubmit)="addEditMatch()">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="team One" [(ngModel)]="match.teamOne" name="teamOne" >
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="team two" [(ngModel)]="match.teamTwo" name="teamTwo">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="score1" [(ngModel)]="match.scoreOne" name="score1">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="score2" [(ngModel)]="match.scoreTwo" name="score2">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="team one logo's " [(ngModel)]="match.urlOne" name="urlOne">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="team two logo's" [(ngModel)]="match.urlTwo" name="urlTwo">
+              </div>
+            <div class="form-group">
+              <input mat-raised-button type="submit" class="btn btn-primary py-3 px-5" [value]="title" >
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+  </div>

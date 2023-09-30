@@ -1,0 +1,38 @@
+<app-banner [title]="'table players'" ></app-banner>
+
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="widget-next-match">
+                <table class="table custom-table">
+                  <thead>
+                    <tr >
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Age</th>
+                      <th>Number</th>
+                      <th >action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let p of players" appColor>
+                      <td>{{p.id}}</td>
+                      <td><strong class="text-white">{{p.name}}</strong></td>
+                      <td><strong class="text-white">{{p.position}}</strong></td>
+                      <td>{{p.age}}</td>
+                      <td>{{p.number}}</td>
+                      <td ><button  class="btn btn-primary py-3 px-4 mr-3" (click)="deletePlayer(p.id)">delete</button>
+                        <button  class="btn btn_secondary py-3 px-4 mr-3" (click)="navigateTo(p.id)">edit</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>

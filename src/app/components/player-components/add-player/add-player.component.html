@@ -1,0 +1,37 @@
+<app-banner [title]="title"></app-banner>
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form #addPlayerForm="ngForm" (ngSubmit)="addEditplayer()">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="name" [(ngModel)]="player.name" name="name" >
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="position" [(ngModel)]="player.position" name="position">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="age" [(ngModel)]="player.age" name="age">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="number" [(ngModel)]="player.number" name="number">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="player image" [(ngModel)]="player.playerImg" name="playerImg">
+              </div>
+              <!-- <div class="form-group">
+                <label for="teamSelect">Select a Team</label>
+                <select class="form-control" id="teamSelect" [(ngModel)]="player.team" name="team">
+                  <option value="">Select a Team</option>
+                  <option *ngFor="let team of teams" [value]="team.id">{{ team.name }}</option>
+                </select>
+              </div> -->
+            <div class="form-group">
+              <input mat-raised-button type="submit" class="btn btn-primary py-3 px-5" [value]="title" >
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+  </div>
